@@ -330,8 +330,11 @@ auto_start(){
 	if [ -L "$KSROOT/init.d/S95Kuainiao.sh" ]; then 
 		rm -rf $KSROOT/init.d/S95Kuainiao.sh
 	fi
+	if [ -L "$KSROOT/init.d/S99Kuainiao.sh" ]; then 
+		rm -rf $KSROOT/init.d/S99Kuainiao.sh
+	fi
 	if [ "$kuainiao_start" == "1" ]; then
-		ln -sf $KSROOT/scripts/kuainiao_keep.sh $KSROOT/init.d/S95Kuainiao.sh
+		ln -sf $KSROOT/scripts/kuainiao_keep.sh $KSROOT/init.d/S99Kuainiao.sh
 	fi
 }
 
